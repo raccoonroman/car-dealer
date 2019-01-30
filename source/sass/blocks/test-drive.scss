@@ -1,3 +1,13 @@
+@keyframes fadeEffect {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
 .test-drive {
 	// margin-bottom: 200px;
 	height: 700px;
@@ -31,6 +41,7 @@
 	text-align: center;
 	border-right: 1px solid #9D9B9C;
 	cursor: pointer;
+	transition: background-color .3s;
 
 	&:last-child {
 		border-right: 0;
@@ -53,6 +64,7 @@
 }
 
 .test-drive__content {
+	animation: fadeEffect 1s;
 	border-left: 1px solid #e9eaef;
 	border-right: 1px solid #e9eaef;
 }
@@ -62,7 +74,9 @@
 	@include ul;
 }
 
-
+.test-drive__slide:focus {
+	outline: none;
+}
 
 
 // slide 1!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -76,6 +90,7 @@
 
 .test-drive__radio-product-list {
 	@include ul;
+	margin-bottom: 66px;
 	padding: 0 17%;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
@@ -91,6 +106,7 @@
 	label {
 		position: relative;
 		padding-left: 37px;
+		margin-bottom: 16px;
 		font-size: 12px;
 		line-height: 23px;
 		order: 2;
@@ -102,6 +118,7 @@
 	}
 
 	.test-drive__radio-product-item-img {
+		margin-bottom: 15px;
 		width: 100%;
 		order: 1;
 	}
@@ -130,14 +147,15 @@
     left: 1px;
     width: 24px;
     height: 24px;
-    background-color: transparent;
     border-radius: 50%;
-    border: 4px solid transparent;
+    background-color: $blue;
+    border: 4px solid #e6e6e6;
+    transform: scale(0);
+    transition: transform .2s;
 	}
 
   input:checked + label::after {
-    background-color: $blue;
-    border: 4px solid #e6e6e6;
+    transform: scale(1);
   }
 }
 
@@ -149,13 +167,19 @@
 .test-drive__slide--2 {
 	h2 {
 		margin: 0;
+		margin-bottom: 45px;
 		text-align: center;
 	}
 }
 
 .test-drive__selected-img {
-	margin: 50px auto 0;
+	margin: 50px 0 10px;
+	text-align: center;
 	filter: brightness(20%);
+
+	img {
+		display: inline;
+	}
 }
 
 .test-drive__radio-city-list {
@@ -177,6 +201,7 @@
 		padding: 23px;
 		padding-right: 63px;
 		border: 1px solid #e6e6e6;
+		cursor: pointer;
 	}
 
 	span {
@@ -204,8 +229,8 @@
 		border: 4px solid $blue;
 	}
 
-	input:checked + label h2,
-	input:checked + label p {
+	input:checked + label span,
+	input:checked + label strong {
 		color: $black;
 	}
 
@@ -279,7 +304,7 @@
 
 
 
-// next and previous buttons
+//start of next and previous buttons
 .test-drive__arrows {
 	display: flex;
 	align-items: center;
@@ -291,6 +316,10 @@
 		border: 0;
 		text-align: center;
 		cursor: pointer;
+	}
+
+	.slick-arrow.slick-disabled {
+		cursor: not-allowed;
 	}
 
 	.slick-prev {
@@ -306,3 +335,92 @@
 	}
 }
 // end of next and previous buttons
+
+
+//start of dots
+
+.test-drive__dots {
+	padding: 40px 7%;
+}
+
+.test-drive__dots-list {
+	@include ul;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	li:last-child {
+		display: none;
+	}
+
+	li {
+		position: relative;
+		z-index: 1;
+		width: 100px;
+		text-align: center;
+
+		button {
+			width: 64px;
+			height: 64px;
+			border-radius: 50%;
+			color: $gray;
+			font-size: 24px;
+			background-color: #fff;
+			border: 1px solid #e6e6e6;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			bottom: -30px;
+			left: 50%;
+			width: 100%;
+			font-size: 12px;
+			line-height: 23px;
+			color: $black;
+			transform: translateX(-50%);
+		}
+
+		&:nth-child(1)::after {
+			content: 'Yeni Kuga';
+		}
+
+		&:nth-child(2)::after {
+			content: 'İstanbul';
+		}
+
+		&:nth-child(3)::after {
+			content: 'Kişisel Bilgiler';
+		}
+
+		&:nth-child(4)::after {
+			content: 'Onay';
+		}
+
+		&:nth-child(5)::after {
+			content: 'Sonuç';
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		right: 0;
+		width: 90%;
+		height: 1px;
+		background-color: #DFDFE0;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+
+
+//end of dots

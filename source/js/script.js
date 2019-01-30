@@ -20,9 +20,14 @@ $(document).ready(function(){
   $('.test-drive__slides').slick({
 		dots: true,
 		// adaptiveHeight: true,
+		draggable: false,
+		swipe: false,
+		infinite:false,
 		appendArrows: ".test-drive__arrows",
+		prevArrow: '<button type="button" class="slick-prev">Önceki Adım</button>',
+		nextArrow: '<button type="button" class="slick-next">Sonraki Adım</button>',
 		appendDots: ".test-drive__dots",
-		// dotsClass: "test-drive__dots"
+		dotsClass: "test-drive__dots-list"
 		// mobileFirst: true,
 		// responsive: [
 		// 	{
