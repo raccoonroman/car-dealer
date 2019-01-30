@@ -59,17 +59,7 @@
 
 
 .test-drive__slides {
-	height: 100%;
-}
-
-.test-drive__slide {
-	height: 100%;
-	display: flex !important;
-	flex-direction: column;
-
-	div:last-child {
-		margin-top: auto;
-	}
+	@include ul;
 }
 
 
@@ -85,6 +75,7 @@
 }
 
 .test-drive__radio-product-list {
+	@include ul;
 	padding: 0 17%;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
@@ -168,8 +159,8 @@
 }
 
 .test-drive__radio-city-list {
-	margin: 0 -15px;
-	padding: 0 17%;
+	@include ul;
+	padding: 0 15%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -188,14 +179,18 @@
 		border: 1px solid #e6e6e6;
 	}
 
-	h2 {
-		text-align: left;
+	span {
+		display: block;
 		margin-bottom: 10px;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 1.5;
+		text-align: left;
 		color: #9b9b9b;
 	}
 
-	p {
-		margin: 0;
+	strong {
+		display: block;
 		font-size: 12px;
 		line-height: 23px;
 		font-weight: 600;
@@ -227,6 +222,7 @@
 // slide 3!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .test-drive__radio-object-list {
+	@include ul;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -275,23 +271,38 @@
   }
 }
 
+.test-drive__input-list {
+	@include ul;
+}
+
 // end of slides
 
 
-.test-drive__slide-btn {
-	text-align: center;
-	padding: 11px 0;
-	cursor: pointer;
-}
 
-.test-drive__btn-next {
-	width: 65%;
-	color: #fff;
-	background: $blue url('../img/icon-arrow-right.svg') right 25px center no-repeat;
-}
+// next and previous buttons
+.test-drive__arrows {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-.test-drive__btn-prev {
-	width: 35%;
-	color: $gray;
-	background: $white url('../img/icon-arrow-left.svg') left 25px center no-repeat;
+	.slick-arrow {
+		height: 52px;
+		padding: 20px 0;
+		border: 0;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.slick-prev {
+		width: 35%;
+		color: $gray;
+		background: $white url('../img/icon-arrow-left.svg') left 25px center no-repeat;
+	}
+
+	.slick-next {
+		width: 65%;
+		color: #fff;
+		background: $blue url('../img/icon-arrow-right.svg') right 25px center no-repeat;
+	}
 }
+// end of next and previous buttons

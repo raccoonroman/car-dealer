@@ -15,22 +15,23 @@ function openTestDrive(evt, cityName) {
 }
 
 
+
 $(document).ready(function(){
-var options=
-{
-width:1108,//width of slider
-height:450,//height of slider
-next_prev:true,//will show next and prev links
-next_class:'test-drive__slide-btn test-drive__btn-next',//class for next link
-prev_class:'test-drive__slide-btn test-drive__btn-prev',//class for prev link
-error_class:'alert alert-danger',//class for validation errors
-texts:{
-next:'Sonraki Adım',//verbiage for next link
-prev:'Önceki Adım'//verbiage for prev link
-  },
-speed:600,//slider speed
-
-};
-
-$('#slider').jFormslider(options);
-})
+  $('.test-drive__slides').slick({
+		dots: true,
+		// adaptiveHeight: true,
+		appendArrows: ".test-drive__arrows",
+		appendDots: ".test-drive__dots",
+		// dotsClass: "test-drive__dots"
+		// mobileFirst: true,
+		// responsive: [
+		// 	{
+		// 		breakpoint: 959,
+		// 		settings: {
+		// 			dots: false,
+		// 			arrows: true
+		// 		}
+		// 	}
+		// ]
+	});
+});
