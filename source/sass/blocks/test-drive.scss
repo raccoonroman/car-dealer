@@ -80,8 +80,7 @@
 
 
 .test-drive {
-	// margin-bottom: 200px;
-	height: 700px;
+	margin-bottom: 200px;
 	box-sizing: border-box;
 	font-family: 'Ford Antenna', 'Tahoma', sans-serif;
 	font-size: 15px;
@@ -541,7 +540,7 @@
 }
 
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
-	height: 220px !important;
+	height: 240px !important;
 }
 
 .xdsoft_datetimepicker .xdsoft_datepicker {
@@ -556,7 +555,7 @@
 
 .xdsoft_datetimepicker .xdsoft_timepicker {
 	width: 70px !important;
-	margin: 10px 22px 0 30px !important;
+	margin: 9px 22px 0 30px !important;
 }
 
 .test-drive__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_calendar td:hover, .test-drive__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
@@ -594,6 +593,27 @@
 
 .test-drive__slide-wrapper {
 	padding: 10% 17%;
+}
+
+
+// slide 6!!!!!!!!!!!!!!!!!!!!!!!!!
+.test-drive__slide--6 {
+	h2 {
+		text-align: center;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+}
+
+.test-drive__slide-check-img {
+	text-align: center;
+	margin-bottom: 20px;
+
+	img {
+		display: inline;
+	}
 }
 
 
@@ -793,5 +813,151 @@
 }
 //end of dots
 
+@media (max-width: 900px) {
+	.test-drive__radio-send-type-block,
+	.test-drive__radio-privacy-block {
+		display: block;
+
+		.test-drive__radio-send-type-title,
+		.test-drive__radio-privacy-title {
+			margin-bottom: 20px;
+		}
+	}
+}
 
 
+@media (max-width: 720px) {
+	.test-drive__tab {
+		font-size: 12px;
+
+		svg {
+			display: none;
+		}
+	}
+
+	.xdsoft_datetimepicker {
+		padding: 0 !important;
+	}
+
+	.xdsoft_datetimepicker .xdsoft_calendar td,
+	.xdsoft_datetimepicker .xdsoft_calendar th {
+		height: 25px !important;
+		padding: 0 !important;
+	}
+
+	.xdsoft_datetimepicker .xdsoft_calendar td {
+		font-size: 12px !important;
+	}
+
+	.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div {
+		font-size: 12px !important;
+		height: 24px !important;
+		line-height: 24px !important;
+	}
+
+	.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+		height: 190px !important;
+	}
+
+	.xdsoft_datetimepicker .xdsoft_timepicker {
+		margin: 9px 0 0 8px !important;
+	}
+
+	.xdsoft_time_box {
+		border-right: 0 !important;
+	}
+
+	.xdsoft_datetimepicker .xdsoft_timepicker {
+		width: 50px !important;
+	}
+
+
+	.test-drive__dots-list {
+
+		&::before {
+			height: 0;
+		}
+
+		li {
+			width: auto;
+
+			&::after {
+				content: '' !important;
+			}
+
+			button {
+				width: 44px;
+				height: 44px;
+			}
+
+			button::before {
+				width: 44px;
+				height: 44px;
+			}
+		}
+	}
+
+	.test-drive__arrows {
+
+		.slick-arrow {
+			height: 52px;
+			padding: 20px 0;
+			border: 0;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.slick-arrow.slick-disabled {
+			cursor: not-allowed;
+		}
+
+		.slick-prev {
+			font-size: 0;
+			width: 24%;
+		}
+
+		.slick-next {
+			width: 76%;
+		}
+	}
+
+	.test-drive__radio-product-list {
+		margin-bottom: 40px;
+		padding: 0 5%;
+		grid-template-columns: auto auto;
+	}
+
+	.test-drive__radio-city-list {
+		padding: 0 5%;
+		margin-bottom: 30px;
+		display: block;
+	}
+
+	.test-drive__radio-send-type-list,
+	.test-drive__radio-privacy-list {
+		display: block;
+	}
+
+	.test-drive__input-list {
+		display: block;
+		padding: 0 5%;
+	}
+
+	.test-drive__input-item {
+		margin-bottom: 10px;
+
+		input {
+			padding: 14px 10px 12px;
+			font-size: 14px;
+		}
+	}
+
+	.test-drive__datetimepicker-wrapper {
+		padding: 0;
+	}
+
+	.test-drive__radio-send-type-block,
+	.test-drive__radio-privacy-block {
+		margin: 0 5%;
+	}
+}
