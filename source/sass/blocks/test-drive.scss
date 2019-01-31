@@ -149,7 +149,6 @@
 	outline: none;
 }
 
-
 // slide 1!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .test-drive__slide--1 {
@@ -256,6 +255,7 @@
 .test-drive__radio-city-list {
 	@include ul;
 	padding: 0 15%;
+	margin-bottom: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -429,6 +429,10 @@
 	}
 }
 
+.test-drive__radio-privacy-block {
+	margin-bottom: 20px;
+}
+
 .test-drive__radio-send-type-list,
 .test-drive__radio-privacy-list {
 	@include ul;
@@ -483,7 +487,6 @@
 
 // slide 4!!!!!!!!!!!!!!!!!!!!!!!!!
 .test-drive__slide--4 {
-	// padding: 0 92px;
 
 	h2 {
 		margin: 32px 0 30px;
@@ -563,6 +566,37 @@
 .test-drive__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box .xdsoft_scroller {
 	background: #0478BC !important;
 }
+
+
+
+// slide 5!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.test-drive__slide--5 {
+	h2 {
+		margin-bottom: 30px;
+		text-align: center;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	input {
+		display: block;
+		margin: 0 auto;
+		max-width: 350px;
+		padding: 14px 20px 12px;
+		width: 100%;
+		color: #4a4a4a;
+		border: 1px solid $gray;
+	}
+}
+
+.test-drive__slide-wrapper {
+	padding: 10% 17%;
+}
+
+
 // end of slides
 
 

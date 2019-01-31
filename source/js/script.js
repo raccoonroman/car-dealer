@@ -19,7 +19,7 @@ function openTestDrive(evt, cityName) {
 $(document).ready(function(){
   $('.test-drive__slides').slick({
 		dots: true,
-		// adaptiveHeight: true,
+		adaptiveHeight: true,
 		draggable: false,
 		swipe: false,
 		infinite:false,

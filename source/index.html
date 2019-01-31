@@ -162,14 +162,14 @@
 								<input id="test-drive-surname" placeholder="Denisov" type="text" name="test-drive-surname" required>
 							</li>
 							<li class="test-drive__input-item  test-drive__input-item--phone">
-								<label class="visually-hidden" for="test-drive-phone-oper">Last Name</label>
+								<label class="visually-hidden" for="test-drive-phone-oper">Phone Operator</label>
 								<input id="test-drive-phone-oper" placeholder="0506" type="tel" name="test-drive-phone-oper" required>
-								<label class="visually-hidden" for="test-drive-phone">Last Name</label>
+								<label class="visually-hidden" for="test-drive-phone">Phone</label>
 								<input id="test-drive-phone" placeholder="5547666699" type="tel" name="test-drive-phone" required>
 							</li>
 							<li class="test-drive__input-item">
-								<label class="visually-hidden" for="test-drive-email">Last Name</label>
-								<input id="test-drive-email" placeholder="Nwoyeakachidenisov@gmail.com" type="tel" name="test-drive-email" required>
+								<label class="visually-hidden" for="test-drive-email">Email</label>
+								<input id="test-drive-email" placeholder="Nwoyeakachidenisov@gmail.com" type="email" name="test-drive-email" required>
 							</li>
 						</ul>
 
@@ -212,8 +212,21 @@
 							<input id="datetimepicker" type="text">
 						</div>
 					</li>
-					<li class="test-drive__slide">Five</li>
-					<li class="test-drive__slide">Six</li>
+					<li class="test-drive__slide  test-drive__slide--5">
+						<div class="test-drive__slide-wrapper">
+							<h2>E-Posta adresinize gönderilen <strong>onay kodunu giriniz</strong>.</h2>
+							<label class="visually-hidden" for="test-drive-code">Code</label>
+							<input id="test-drive-code" placeholder="******" type="number" name="test-drive-code" required>
+						</div>
+					</li>
+					<li class="test-drive__slide  test-drive__slide--6">
+						<div class="test-drive__slide-wrapper">
+							<div class="test-drive__slide-check-img">
+								<img src="img/icon-check-big.svg" alt="">
+							</div>
+							<h2>Test Sürüşü Randevunuz <strong>başarıyla tamamlanmıştır</strong>.</h2>
+						</div>
+					</li>
 				</ul>
 				<div class="test-drive__arrows"></div>
 			</form>
