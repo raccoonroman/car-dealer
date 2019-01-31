@@ -99,7 +99,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: -67px;
-	// transform: translateY(-67px);
 }
 
 .test-drive__tab {
@@ -118,7 +117,7 @@
 	}
 
 	svg {
-		transform: translateY(4px);
+		transform: translateY(6px);
 		margin-right: 5%;
 		fill: #343434;
 	}
@@ -383,7 +382,21 @@
 		padding: 14px 20px 12px;
 		width: 100%;
 		color: #4a4a4a;
-		border: 1px solid $gray;
+		border: 1px solid #e6e6e6;
+
+		&::placeholder {
+			color: $gray;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border-color: $blue;
+		}
+
+		&:valid {
+			border-color: $green;
+		}
 	}
 }
 
@@ -588,6 +601,20 @@
 		width: 100%;
 		color: #4a4a4a;
 		border: 1px solid $gray;
+
+		&::placeholder {
+			color: $gray;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border-color: $blue;
+		}
+
+		&:valid {
+			border-color: $green;
+		}
 	}
 }
 
@@ -812,6 +839,8 @@
 	}
 }
 //end of dots
+
+
 
 @media (max-width: 900px) {
 	.test-drive__radio-send-type-block,

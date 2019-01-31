@@ -1,0 +1,684 @@
+.service {
+	min-height: 500px;
+
+	*, *::before, *::after {
+		box-sizing: inherit;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.visually-hidden:not(:focus):not(:active),
+	input[type="checkbox"].visually-hidden,
+	input[type="radio"].visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		white-space: nowrap;
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 36px;
+		font-weight: 300;
+		line-height: 1.69;
+		color: #343434;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 1.5;
+		color: #343434;
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 2;
+		color: #4a4a4a;
+	}
+
+	h4 {
+		margin: 0;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.92;
+		color: #4a4a4a;
+	}
+
+	h5 {
+		margin: 0;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 2.4;
+		color: #4a4a4a;
+	}
+}
+
+
+.service {
+	margin-bottom: 200px;
+	box-sizing: border-box;
+	font-family: 'Ford Antenna', 'Tahoma', sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 400;
+	color: $black;
+	background-color: #fff;
+	min-width: 320px;
+}
+
+.service__tabs {
+	width: 100%;
+	color: #4a4a4a;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.service__tab {
+	width: 50%;
+	color: inherit;
+	background-color: rgba(242, 242, 242, 0.9);
+	border: 0;
+	height: 63px;
+	text-align: center;
+	border-right: 1px solid #9D9B9C;
+	cursor: pointer;
+	transition: background-color .3s;
+
+	&:last-child {
+		border-right: 0;
+	}
+
+	svg {
+		transform: translateY(6px);
+		margin-right: 5%;
+		fill: #343434;
+	}
+}
+
+.service__tab--active {
+	color: #fefeff;
+	background-color: $blue;
+
+	svg {
+		fill: #fefeff;
+	}
+}
+
+
+.service__content {
+	animation: fadeEffect 1s;
+	border-left: 1px solid #e9eaef;
+	border-right: 1px solid #e9eaef;
+}
+
+.service__slides {
+	@include ul;
+}
+
+.service__slide:focus {
+	outline: none;
+}
+
+
+//start of next and previous buttons
+.service__arrows {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.slick-arrow {
+		height: 52px;
+		padding: 20px 0;
+		border: 0;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.slick-arrow.slick-disabled {
+		cursor: not-allowed;
+	}
+
+	.slick-prev {
+		width: 35%;
+		color: $gray;
+		background: $white url('../img/icon-arrow-left.svg') left 25px center no-repeat;
+	}
+
+	.slick-next {
+		width: 65%;
+		color: #fff;
+		background: $blue url('../img/icon-arrow-right.svg') right 25px center no-repeat;
+	}
+}
+// end of next and previous buttons
+
+
+//start of dots
+
+.service__dots {
+	position: relative;
+	margin-bottom: 10px;
+	padding: 40px 7%;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+	}
+}
+
+.service__dots-list {
+	@include ul;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+
+	li:last-child {
+		display: none;
+	}
+
+	li {
+		position: relative;
+		z-index: 1;
+		width: 100px;
+		text-align: center;
+
+		button {
+			position: relative;
+			width: 64px;
+			height: 64px;
+			border-radius: 50%;
+			color: $gray;
+			font-size: 24px;
+			background-color: #fff;
+			border: 1px solid #e6e6e6;
+
+			&:focus {
+				outline: none;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 64px;
+				height: 64px;
+				background-color: #fff;
+				border-radius: 50%;
+				border: 4px solid $blue;
+				transform: translate(-50%, -50%);
+				transition: all .2s;
+			}
+
+			&::after {
+				content: url('../img/icon-check.svg');
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		&::after {
+			position: absolute;
+			bottom: -30px;
+			left: 50%;
+			width: 100%;
+			font-size: 12px;
+			line-height: 23px;
+			color: $black;
+			transform: translateX(-50%);
+		}
+
+		&:nth-child(1)::after {
+			content: '34PJ0912';
+		}
+
+		&:nth-child(2)::after {
+			content: 'İstanbul';
+		}
+
+		&:nth-child(3)::after {
+			content: 'Hizmetler';
+		}
+
+		&:nth-child(4)::after {
+			content: '30.01 - 9:00';
+		}
+
+		&:nth-child(5)::after {
+			content: 'Onay';
+		}
+	}
+
+	.slick-active::after {
+		color: $gray;
+	}
+
+	.slick-active ~ li::after {
+		color: $gray;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		right: 0;
+		width: 90%;
+		height: 1px;
+		background-color: #DFDFE0;
+		transform: translate(-50%, -50%);
+	}
+
+	.slick-active {
+		button {
+			color: #fff;
+			background-color: $blue;
+			border: 4px solid #e6e6e6;
+
+			&::before,
+			&::after {
+				content: '';
+				width: 0;
+				height: 0;
+				border: 0;
+			}
+		}
+	}
+
+	.slick-active ~ li {
+
+		button::before,
+		button::after {
+			content: '';
+			width: 0;
+			height: 0;
+			border: 0;
+		}
+	}
+}
+//end of dots
+
+
+.service__slide-wrapper {
+	padding: 0 8.5%;
+}
+
+
+// slide 1 !!!!!!!!!!!!!!!!!!!11
+.service__slide--1 {
+
+	.service__slide-wrapper {
+		margin-bottom: 10%;
+	}
+
+	h2 {
+		text-align: center;
+		margin-bottom: 10%;
+		margin-top: 20px;
+	}
+
+	input {
+		display: block;
+		margin: 0 auto;
+		max-width: 350px;
+		padding: 14px 20px 12px;
+		width: 100%;
+		color: #4a4a4a;
+		border: 1px solid $gray;
+
+		&::placeholder {
+			color: $gray;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border-color: $blue;
+		}
+
+		&:valid {
+			border-color: $green;
+		}
+	}
+}
+
+
+// slide 2!!!!!!!!!!!!!!!!!!!
+.service__slide--2 {
+	h2 {
+		margin-bottom: 10%;
+		text-align: center;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+}
+
+.service__radio-city-list {
+	@include ul;
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.service__radio-city-item {
+	padding: 15px;
+	flex-grow: 1;
+
+	label {
+		position: relative;
+		display: block;
+		padding: 23px;
+		padding-right: 63px;
+		border: 1px solid #e6e6e6;
+		cursor: pointer;
+	}
+
+	span {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 1.5;
+		text-align: left;
+		color: #9b9b9b;
+	}
+
+	strong {
+		display: block;
+		font-size: 12px;
+		line-height: 23px;
+		font-weight: 600;
+		color: #9b9b9b;
+	}
+
+	input:checked + label {
+		padding: 20px;
+		padding-right: 60px;
+		border-color: transparent;
+		border: 4px solid $blue;
+	}
+
+	input:checked + label span,
+	input:checked + label strong {
+		color: $black;
+	}
+
+	input:checked + label::after {
+		content: url('../img/icon-check.svg');
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+}
+
+
+//slide 3!!!!!!!!!!!!
+.service__slide--3 {
+	h2 {
+		margin: 40px 0;
+		text-align: center;
+	}
+
+	textarea {
+		margin-bottom: 40px;
+		width: 100%;
+		border: 1px solid #E6E6E6;
+		padding: 12px 21px;
+		min-height: 120px;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border-color: $blue;
+		}
+
+		&::placeholder {
+			color: $gray;
+		}
+	}
+}
+
+.service__select-list {
+	@include ul;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	margin-bottom: 40px;
+}
+
+.service__select-item {
+	margin-bottom: 34px;
+
+	label {
+		position: relative;
+		padding-left: 40px;
+		font-size: 13px;
+		line-height: 23px;
+		cursor: pointer;
+	}
+
+	label::before {
+		content: "";
+		position: absolute;
+		top: -6px;
+		left: 0;
+		width: 24px;
+		height: 24px;
+		border: 1px solid #e6e6e6;
+	}
+
+	input:checked + label::before {
+		border: 1px solid $blue;
+		background-color: $blue;
+	}
+
+	input:checked + label::after {
+		content: "";
+		position: absolute;
+		top: -6px;
+		left: 0;
+		width: 24px;
+		height: 24px;
+		background: url('../img/icon-check-white.svg') center no-repeat;
+	}
+}
+
+//slide 4!!!!!!!!!!
+.service__slide--4 {
+	h2 {
+		text-align: center;
+		margin: 27px 0;
+	}
+}
+
+.service__datetimepicker-wrapper {
+	margin-bottom: 40px;
+	text-align: center;
+	font-family: 'Ford Antenna', 'Tahoma', sans-serif;
+}
+
+
+//custom datepicker styles
+.service__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_calendar td:hover, .service__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+	background-color: $green !important;
+}
+
+.service__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box .xdsoft_scroller {
+	background: #0478BC !important;
+}
+
+
+// slide 5 !!!!!!!!!!!!!!!!
+.service__slide--5 {
+	h2 {
+		margin: 5% 0 10%;
+		text-align: center;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	input {
+		display: block;
+		margin: 0 auto;
+		max-width: 350px;
+		padding: 14px 20px 12px;
+		width: 100%;
+		color: #4a4a4a;
+		border: 1px solid $gray;
+
+		&::placeholder {
+			color: $gray;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border-color: $blue;
+		}
+
+		&:valid {
+			border-color: $green;
+		}
+	}
+}
+
+// slide 6 !!!!!!!!!!!!!!!!
+.service__slide--6 {
+	h2 {
+		text-align: center;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+}
+
+.service__slide-check-img {
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 20px;
+
+	img {
+		display: inline;
+	}
+}
+
+
+
+
+@media (max-width: 720px) {
+	.service__tab {
+		font-size: 12px;
+
+		svg {
+			display: none;
+		}
+	}
+
+	.service__dots-list {
+
+		&::before {
+			height: 0;
+		}
+
+		li {
+			width: auto;
+
+			&::after {
+				content: '' !important;
+			}
+
+			button {
+				width: 44px;
+				height: 44px;
+			}
+
+			button::before {
+				width: 44px;
+				height: 44px;
+			}
+		}
+	}
+
+	.service__arrows {
+
+		.slick-arrow {
+			height: 52px;
+			padding: 20px 0;
+			border: 0;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.slick-arrow.slick-disabled {
+			cursor: not-allowed;
+		}
+
+		.slick-prev {
+			font-size: 0;
+			width: 24%;
+		}
+
+		.slick-next {
+			width: 76%;
+		}
+	}
+
+	.service__radio-city-list {
+		margin-bottom: 30px;
+		display: block;
+	}
+
+	.service__select-list {
+		display: block;
+	}
+
+	.service__select-item {
+		margin-bottom: 12px;
+	}
+
+	.service__slide--4 {
+		.service__slide-wrapper {
+			padding: 0;
+		}
+	}
+
+	.service__slide--3 {
+		h2 {
+			margin-top: 0;
+		}
+	}
+}
