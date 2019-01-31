@@ -480,6 +480,89 @@
   }
 }
 
+
+// slide 4!!!!!!!!!!!!!!!!!!!!!!!!!
+.test-drive__slide--4 {
+	// padding: 0 92px;
+
+	h2 {
+		margin: 32px 0 30px;
+		text-align: center;
+	}
+}
+
+.test-drive__datetimepicker-wrapper {
+	padding: 0 8.5%;
+	margin-bottom: 40px;
+	text-align: center;
+	font-family: 'Ford Antenna', 'Tahoma', sans-serif;
+}
+
+
+// custom datetimepicker style
+
+.xdsoft_datetimepicker {
+	padding-left: 30px !important;
+	padding-top: 15px !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td,
+.xdsoft_datetimepicker .xdsoft_calendar th {
+
+	border: none !important;
+	height: 36px !important;
+	padding: 0 15px !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td {
+	font-size: 15px !important;
+	color: #4a4a4a !important;
+	background-color: #fff !important;
+
+	&.xdsoft_disabled {
+		text-decoration: line-through;
+	}
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar th {
+	text-transform: uppercase;
+	line-height: 23px;
+	color: #4a4a4a !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div {
+	font-size: 15px !important;
+	height: 32px !important;
+	line-height: 32px !important;
+	background-color: #fff !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+	height: 220px !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker {
+	margin-left: 0 !important;
+	width: auto !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+	color: #fff !important;
+	background-color: #0478BC !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker {
+	width: 70px !important;
+	margin: 10px 22px 0 30px !important;
+}
+
+.test-drive__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_calendar td:hover, .test-drive__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+	background-color: $green !important;
+}
+
+.test-drive__datetimepicker-wrapper .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box .xdsoft_scroller {
+	background: #0478BC !important;
+}
 // end of slides
 
 
@@ -583,7 +666,7 @@
 				border-radius: 50%;
 				border: 4px solid $blue;
 				transform: translate(-50%, -50%);
-				transition: all .3s;
+				transition: all .2s;
 			}
 
 			&::after {
